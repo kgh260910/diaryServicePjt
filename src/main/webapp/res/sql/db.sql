@@ -24,7 +24,7 @@ values('gildong', '1234', 'gildong@gamil.com', '010-1234-5678');
 insert into tbl_member(memId, memPw, memMail, memPhone)
 values('chanho', '0000', 'chanho@gamil.com', '010-1234-9999');
 
-set @@auto_increment_increment = 3;   -- 3씩 증가 (1000 -> 1003 -> 1006)
+set @@auto_increment_increment = 3;   -- 3씩 증가 (1001 -> 1004 -> 1007)
 
 insert into tbl_member(memId, memPw, memMail, memPhone)
 values('seari', '1111', 'seari@gamil.com', '010-1234-7777');
