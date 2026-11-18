@@ -1,0 +1,29 @@
+package com.office.member;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class MemberServiceForDW implements IMemberService {
+
+//	MemberDaoForMySQL memberDaoForMySQL = new MemberDaoForMySQL(); // 아래와 같이 사용하면 부품갈아끼기가 쉽다.
+//	IMemberDao iMemberDao = new MemberDaoForOracle();   // 인터페이스타입 변수명 = new 상속하는클래스 생성자();
+	
+	final private IMemberDao iMemberDao;
+	
+	public MemberServiceForDW(IMemberDao iMemberDao) {
+		this.iMemberDao = iMemberDao;
+	}
+
+	@Override
+	public int signup(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int signin(HttpServletRequest request, HttpServletResponse response) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+}
