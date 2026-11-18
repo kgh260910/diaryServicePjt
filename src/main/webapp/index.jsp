@@ -8,7 +8,18 @@
 </head>
 <body>
 
-	This page is HOME.
+	
+	<jsp:include page="./view/include/header.jsp" />
+	
+	<jsp:include page="./view/include/nav.jsp" />
+	
+	<article>
+		<div>
+			This page is HOME.
+		</div>
+	</article>
+
+	<jsp:include page="./view/include/footer.jsp" />
 
 </body>
 </html>
