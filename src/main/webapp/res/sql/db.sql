@@ -32,3 +32,7 @@ insert into tbl_member(memId, memPw, memMail, memPhone)
 values('seari2', '1111', 'seari2@gamil.com', '010-1234-7778');
 
 drop table tbl_member;
+
+select count(*) cnt from tbl_member where memId = 'gildong';
+
+delete from tbl_member;

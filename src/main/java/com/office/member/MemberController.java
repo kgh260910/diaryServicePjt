@@ -38,6 +38,12 @@ public class MemberController extends HttpServlet {
 			memberService = new MemberServiceForDW(new MemberDaoForMySQL());
 			int resultForSignUp = memberService.signup(request, response);
 			
+			if (resultForSignUp > 0) {
+				nextPage = "view/member/signup_ok.jsp";
+			} else {
+				nextPage = "view/member/signup_ng.jsp";
+			}
+			
 			break;
 			
 		case "/signin_form.mem":

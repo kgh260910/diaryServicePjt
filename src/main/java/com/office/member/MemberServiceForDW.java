@@ -30,11 +30,14 @@ public class MemberServiceForDW implements IMemberService {
 		MemberDto memberDto = new MemberDto(memId, memPw, memMail, memPhone);
 		
 		boolean isMember = iMemberDao.isMember(memId);
+		int result = 0;
+		
 		if (!isMember) {
-			int result = iMemberDao.insertNewMember(memberDto);
+			result = iMemberDao.insertNewMember(memberDto);
+			
 		}
 		
-		return 0;
+		return result;
 	}
 
 	@Override

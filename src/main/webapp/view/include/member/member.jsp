@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 
+<%--jsp파일에서 js파일로 코딩하면 jsp:include로 쉽게가져올수 있습니다. --%>
 <script>
     
     function signupForm() {
