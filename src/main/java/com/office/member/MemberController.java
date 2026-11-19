@@ -33,6 +33,18 @@ public class MemberController extends HttpServlet {
 			
 			break;
 			
+		case "/signin_form.mem":
+			break;
+			
+		case "/signout_confirm.mem":
+			break;
+			
+		case "/diary_write_form.dir":
+			break;
+			
+		case "/diary_list.dir":
+			break;
+			
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);

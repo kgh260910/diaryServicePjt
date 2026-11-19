@@ -1,0 +1,31 @@
+article {
+	width: 1000px;
+	margin: 50px auto 500px;
+}
+
+article div.article_wrap {
+	text-align: center;
+}
+
+
+.basic_input_button {
+	width: 200px;
+	padding: 10px 5px;
+	margin: 2px;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	font-size: 1.2em;
+	outline: none;
+	cursor: pointer;
+}
+
+.basic_input {
+	width: 400px;
+	height: 25px;
+	padding: 10px 5px;
+	margin: 2px;
+	border: 1px solid #dadada;
+	border-radius: 5px;
+	font-size: 1.2em;
+	outline: none;
+}
