@@ -16,7 +16,24 @@ public class MemberServiceForDW implements IMemberService {
 
 	@Override
 	public int signup(HttpServletRequest request, HttpServletResponse response) {
-		// TODO Auto-generated method stub
+		
+		String memId = request.getParameter("memId");
+		String memPw = request.getParameter("memPw");
+		String memMail = request.getParameter("memMail");
+		String memPhone = request.getParameter("memPhone");
+		
+		System.out.println(memId);
+		System.out.println(memPw);
+		System.out.println(memMail);
+		System.out.println(memPhone);
+		
+		MemberDto memberDto = new MemberDto(memId, memPw, memMail, memPhone);
+		
+		boolean isMember = iMemberDao.isMember(memId);
+		if (!isMember) {
+			int result = iMemberDao.insertNewMember(memberDto);
+		}
+		
 		return 0;
 	}
 

@@ -33,6 +33,13 @@ public class MemberController extends HttpServlet {
 			
 			break;
 			
+		case "/signup_confirm.mem":
+		
+			memberService = new MemberServiceForDW(new MemberDaoForMySQL());
+			int resultForSignUp = memberService.signup(request, response);
+			
+			break;
+			
 		case "/signin_form.mem":
 			break;
 			
