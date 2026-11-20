@@ -18,6 +18,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 	public boolean isMember(String memId) {
 		
 		int result = 0;
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
@@ -49,7 +50,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 			
 			// 7. 가져온 데이터 분석하기
 			while (rs.next()) {
-				int cnt = rs.getInt("cnt");
+				result = rs.getInt("cnt");
 			}
 			
 		} catch (Exception e) {
@@ -77,6 +78,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 	public int insertNewMember(MemberDto memberDto) {
 		
 		int result = 0;
+		
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		
@@ -94,7 +96,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 							+ 	"memPw, "
 							+ 	"memMail, "
 							+ 	"memPhone) "
-							+ "value(?,?,?,?)";
+							+ "value(?, ?, ?, ?)";
 			
 			// 4. 일꾼 선택(생성)
 			pstmt = conn.prepareStatement(sql); 
@@ -153,7 +155,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 			
 			// 3. SQL 작성(작업 지시서)
 //			String sql = "select * from tbl_member where memId = " + memId;
-			String sql = "select count"
+			String sql = "select "
 						+ 	"* "
 						+ "from "
 						+ 	"tbl_member "
@@ -186,12 +188,7 @@ public class MemberDaoForMySQL implements IMemberDao {
 			 * executeQuery(): select, 반환형(ResultSet) -> while문으로 사용하자
 			 * executeUpdate(): insert, update, delete, 반환형(int) -> 영향을 받은 행 수
 			 */
-			
-			// 7. 가져온 데이터 분석하기
-			while (rs.next()) {
-				int cnt = rs.getInt("cnt");
-			}
-			
+					
 		} catch (Exception e) {
 			e.printStackTrace();
 			
