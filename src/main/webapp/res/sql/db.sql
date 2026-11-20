@@ -24,7 +24,8 @@ values('gildong', '1234', 'gildong@gamil.com', '010-1234-5678');
 insert into tbl_member(memId, memPw, memMail, memPhone)
 values('chanho', '0000', 'chanho@gamil.com', '010-1234-9999');
 
-set @@auto_increment_increment = 3;   -- 3씩 증가 (1001 -> 1004 -> 1007)
+-- set @@auto_increment_increment = 3;   -- 3씩 증가 (1001 -> 1004 -> 1007)
+set GLOBAL auto_increment_increment = 3; -- 3씩 증가 (1001 -> 1004 -> 1007)
 
 insert into tbl_member(memId, memPw, memMail, memPhone)
 values('seari', '1111', 'seari@gamil.com', '010-1234-7777');
@@ -36,3 +37,11 @@ drop table tbl_member;
 select count(*) cnt from tbl_member where memId = 'gildong';
 
 delete from tbl_member;
+
+-- 쿼리문 쓸 때 지향하는 방법
+select 
+	* 
+from 
+	tbl_member 
+where 
+	memId = 'gildong';
