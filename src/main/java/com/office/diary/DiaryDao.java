@@ -64,11 +64,8 @@ public class DiaryDao {
 		}
 		
 		return result;
-	}
 		
-		
-		
-		return 0;
+
 	}
 
 }
