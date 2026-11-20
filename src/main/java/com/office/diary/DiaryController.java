@@ -30,6 +30,13 @@ public class DiaryController extends HttpServlet {
 			nextPage = generateView("write_form");
 			
 			break;
+			
+		case "/write_confirm.dir":
+			
+			diaryService = new DiaryService(new DiaryDao());
+			int resultForWrite = diaryService.writeNewDiary(request, response);
+			
+			break;
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
