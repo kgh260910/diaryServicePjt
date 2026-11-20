@@ -6,9 +6,9 @@
 <meta charset="UTF-8">
 <jsp:include page="../include/title.jsp" />
 
-
 <link href="./res/css/member/signup_form.css" rel="stylesheet" type="text/css">   
 
+<%-- 데이터 유효성 검사 --%>
 <jsp:include page="../include/member/member.jsp" />
 
 </head>

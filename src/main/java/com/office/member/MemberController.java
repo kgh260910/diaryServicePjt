@@ -86,12 +86,6 @@ public class MemberController extends HttpServlet {
 			
 			break;
 			
-		case "/diary_write_form.dir":
-			break;
-			
-		case "/diary_list.dir":
-			break;
-			
 		}
 		
 		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
