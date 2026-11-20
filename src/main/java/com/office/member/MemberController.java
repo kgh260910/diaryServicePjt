@@ -78,6 +78,12 @@ public class MemberController extends HttpServlet {
 				
 			
 		case "/signout_confirm.mem":
+			
+			HttpSession session = request.getSession();
+			session.removeAttribute("singinedMemberId");
+			
+			nextPage = "/";
+			
 			break;
 			
 		case "/diary_write_form.dir":

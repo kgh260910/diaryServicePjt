@@ -45,3 +45,17 @@ from
 	tbl_member 
 where 
 	memId = 'gildong';
+
+
+create table tbl_diary(
+	diaryNo			int auto_increment,
+	diaryWord		varchar(100) not null,
+	memId			varchar(20) unique not null,
+	diaryRegDate	timestamp default CURRENT_TIMESTAMP,
+	diaryModDate	timestamp default CURRENT_TIMESTAMP on update current_timestamp,
+	primary key(diaryNo)
+) auto_increment = 10001;
+
+show tables;
+desc tbl_diary;
+select * from tbl_diary;
