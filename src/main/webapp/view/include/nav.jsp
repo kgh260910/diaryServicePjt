@@ -6,10 +6,22 @@
 <nav>
 		<div class="nav_wrap">
 			<a href="<%= request.getContextPath() %>/">HOME</a>
+			
+			<%
+				Object object = session.getAttribute("singinedMemberId");
+				if (object == null) {
+			%>
 			<a href="<%= request.getContextPath() %>/signup_form.mem">SIGN-UP</a>
 			<a href="<%= request.getContextPath() %>/signin_form.mem">SIGN-IN</a>
+			<% 
+				} else {
+			%>
 			<a href="<%= request.getContextPath() %>/signout_confirm.mem">SIGN-OUT</a>
 			<a href="<%= request.getContextPath() %>/diary_write_form.dir">DIARY_WRITE</a>
 			<a href="<%= request.getContextPath() %>/diary_list.dir">DIARY_LIST</a>
+			<%
+				}
+			%>
+			
 		</div>
 </nav>
