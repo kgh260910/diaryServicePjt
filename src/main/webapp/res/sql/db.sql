@@ -50,12 +50,25 @@ where
 create table tbl_diary(
 	diaryNo			int auto_increment,
 	diaryWord		varchar(100) not null,
-	memId			varchar(20) unique not null,
+	memId			varchar(20) unique not null,  
 	diaryRegDate	timestamp default CURRENT_TIMESTAMP,
 	diaryModDate	timestamp default CURRENT_TIMESTAMP on update current_timestamp,
 	primary key(diaryNo)
 ) auto_increment = 10001;
 
+-- tbl_diary의 memId의 unique속성을 빼고 싶어 아래 명령어를 사용했습니다.
+-- 위 테이블에서 unique를 지우지 말고 따로 스크럼블을 만들어 놓는게 좋습니다.
+alter table tbl_diary drop index memId; 
+
+
 show tables;
 desc tbl_diary;
 select * from tbl_diary;
+
+-- table join
+select * from tbl_diary td -- td,tm처럼 짧게 사용할 수 있습니다.
+join tbl_member tm
+on td.memId = tm.memId -- 두 테이블 모두에 존재하는 칼럼 사용
+-- where td.memId = 'chanho';
+
+

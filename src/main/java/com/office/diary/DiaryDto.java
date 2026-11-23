@@ -2,11 +2,21 @@ package com.office.diary;
 
 public class DiaryDto {
 	
+	// only diary
 	private int diaryNo;
 	private String diaryWord;
-	private String memId;
+//	private String memId;         // duplication 에러나므로 지우기
 	private String diaryRegDate;
 	private String diaryModDate;
+	
+	// only member
+	private int memNo;	
+	private String memId;	
+	private String memPw;	
+	private String memMail;	
+	private String memPhone;	
+	private String memRegDate;	
+	private String memModDate;
 	
 	public DiaryDto() {
 	}
@@ -62,6 +72,54 @@ public class DiaryDto {
 
 	public void setDiaryModDate(String diaryModDate) {
 		this.diaryModDate = diaryModDate;
+	}
+
+	public int getMemNo() {
+		return memNo;
+	}
+
+	public void setMemNo(int memNo) {
+		this.memNo = memNo;
+	}
+
+	public String getMemPw() {
+		return memPw;
+	}
+
+	public void setMemPw(String memPw) {
+		this.memPw = memPw;
+	}
+
+	public String getMemMail() {
+		return memMail;
+	}
+
+	public void setMemMail(String memMail) {
+		this.memMail = memMail;
+	}
+
+	public String getMemPhone() {
+		return memPhone;
+	}
+
+	public void setMemPhone(String memPhone) {
+		this.memPhone = memPhone;
+	}
+
+	public String getMemRegDate() {
+		return memRegDate;
+	}
+
+	public void setMemRegDate(String memRegDate) {
+		this.memRegDate = memRegDate;
+	}
+
+	public String getMemModDate() {
+		return memModDate;
+	}
+
+	public void setMemModDate(String memModDate) {
+		this.memModDate = memModDate;
 	}
 	
 	
