@@ -26,12 +26,7 @@
 			
 			<h3>THIS PAGE IS MY DIARIES.</h3>
 			
-			<%
-				List<DiaryDto> myDiaries = (List<DiaryDto>)request.getAttribute("myDiaries");
-				for (int i = 0; i < myDiaries.size(); i++) {
-					
-				}
-			%>
+			
 			
 			<table border="1">
 				<thead>
@@ -50,19 +45,27 @@
 					</tr>
 				</thead>	
 				<tbody>
+				<%
+					List<DiaryDto> myDiaries = (List<DiaryDto>)request.getAttribute("myDiaries");
+					for (int i = 0; i < myDiaries.size(); i++) {
+				%>	
 					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td><%= myDiaries.get(i).getDiaryNo() %></td>
+						<td><%= myDiaries.get(i).getDiaryWord() %></td>
+						<td><%= myDiaries.get(i).getDiaryRegDate() %></td>
+						<td><%= myDiaries.get(i).getDiaryModDate() %></td>
+						<td><%= myDiaries.get(i).getMemNo() %></td>
+						<td><%= myDiaries.get(i).getMemId() %></td>
+						<td><%= myDiaries.get(i).getMemPw() %></td>
+						<td><%= myDiaries.get(i).getMemMail() %></td>
+						<td><%= myDiaries.get(i).getMemPhone() %></td>
+						<td><%= myDiaries.get(i).getMemRegDate() %></td>
+						<td><%= myDiaries.get(i).getMemModDate() %></td>
 					</tr>
+				<%
+					}
+				%>
+					
 				</tbody>
 			</table>
 			
