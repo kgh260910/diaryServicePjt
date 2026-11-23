@@ -47,8 +47,7 @@ public class DiaryDao {
 			 * executeQuery(): select, 반환형(ResultSet) -> while문으로 사용하자
 			 * executeUpdate(): insert, update, delete, 반환형(int) -> 영향을 받은 행 수
 			 */
-			
-			
+				
 		} catch (Exception e) {
 			e.printStackTrace();
 			
@@ -68,7 +67,6 @@ public class DiaryDao {
 		
 		return result;
 		
-
 	}
 
 	public List<DiaryDto> selectDiariesByMemId(String signInedMemberId) {
@@ -156,8 +154,6 @@ public class DiaryDao {
 		}
 		
 		return diaryDtos;
-		
-		
 		
 	}
 
