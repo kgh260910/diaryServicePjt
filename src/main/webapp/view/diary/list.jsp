@@ -25,9 +25,7 @@
 		<div class="article_wrap">
 			
 			<h3>THIS PAGE IS MY DIARIES.</h3>
-			
-			
-			
+				
 			<table border="1">
 				<thead>
 					<tr>
@@ -64,8 +62,7 @@
 					</tr>
 				<%
 					}
-				%>
-					
+				%>				
 				</tbody>
 			</table>
 			

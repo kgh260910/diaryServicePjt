@@ -21,7 +21,6 @@ public class DiaryDao {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 	
-		
 		try {
 			// 1. 드라이버 로드 in 메모리
 			Class.forName(DRIVER);  
