@@ -83,9 +83,9 @@ public class DiaryDao {
 			conn = DriverManager.getConnection(URL, USERNAME, PASSWORD);
 			
 			// 3. SQL 작성(작업 지시서)
-			String sql = "select * from tbl_diary td"
-					+ "join tbl_member tm"
-					+ "on td.memId = tm.memId"
+			String sql = "select * from tbl_diary td "
+					+ "join tbl_member tm "
+					+ "on td.memId = tm.memId "
 					+ "where td.memId = ?";
 			
 			// 4. 일꾼 선택(생성)

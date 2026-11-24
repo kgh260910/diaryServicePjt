@@ -2,6 +2,7 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,8 +44,29 @@
 					</tr>
 				</thead>	
 				<tbody>
+					<%-- jstl반복문 c:forEach, var:변수명, items="${myDiaries}": 반복할 대상 목록을 지정합니다.
+					 EL(${...})을 사용해 request나 session 등에 담긴 myDiaries 리스트를 가져옵니다. --%>
+					<c:forEach var="item" items="${myDiaries}">      
+						<tr>
+							<td>${item.diaryNo}</td>
+							<td>${item.diaryWord}</td>
+							<td>${item.diaryRegDate}</td>
+							<td>${item.diaryModDate}</td>
+							<td>${item.memNo}</td>
+							<td>${item.memId}</td>
+							<td>${item.memPw}</td>
+							<td>${item.memMail}</td>
+							<td>${item.memPhone}</td>
+							<td>${item.memRegDate}</td>
+							<td>${item.memModDate}</td>
+						</tr>
+					</c:forEach>
+				<%-- 
 				<%
-					List<DiaryDto> myDiaries = (List<DiaryDto>)request.getAttribute("myDiaries");
+					List<DiaryDto> myDiaries = (List<DiaryDto>) request.getAttribute("myDiaries");
+				
+					System.out.println("myDiaries size: " + (myDiaries != null ? myDiaries.size() : "null"));
+					
 					for (int i = 0; i < myDiaries.size(); i++) {
 				%>	
 					<tr>
@@ -62,7 +84,8 @@
 					</tr>
 				<%
 					}
-				%>				
+				%>
+				--%>				
 				</tbody>
 			</table>
 			
